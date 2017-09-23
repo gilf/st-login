@@ -17,7 +17,13 @@
 </head>
 <body>
 
-  <my-name first="Stencil" last="JS"></my-name>
-
+  <st-login></st-login>
+  <script>
+      window.addEventListener('DOMContentLoaded', () => {
+          document.addEventListener('loginShouldOccur', (evt) => {
+          console.log(evt.detail);
+        });
+      });
+  </script>
 </body>
 </html>

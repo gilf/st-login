@@ -1,0 +1,61 @@
+st-login {
+  label {
+    position:absolute;
+    transform:translateY(6px);
+    left:13px;
+
+    transition:all 0.25s ease;
+    pointer-events: none;
+    font-size:22px;
+    .req {
+      margin:2px;
+      color:green;
+    }
+  }
+
+  label.active {
+
+    left:2px;
+    font-size:14px;
+    .req {
+      opacity:0;
+    }
+  }
+
+  label.highlight {
+    color: #ffffff;
+  }
+
+  input {
+    font-size:22px;
+    display:block;
+    padding-left: 130px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border: 1px solid lightgray;
+    border-radius:0;
+    &:focus {
+      outline:0;
+      border-color: green;
+    }
+  }
+
+  .field-wrap {
+    position:relative;
+    margin-bottom:20px;
+  }
+
+  button {
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #000000;
+    color: #ffffff;
+    transition: all .5s ease;
+    width: 100px;
+    height:30px;
+    &:hover, &:focus {
+      background: lightgrey;
+    }
+  }
+}

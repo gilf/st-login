@@ -1,8 +1,8 @@
 {
-  "name": "@stencil/starter",
-  "private": true,
+  "name": "st-login",
+  "private": false,
   "version": "0.0.1",
-  "description": "Stencil Starter App",
+  "description": "Stencil Login Component",
   "files": [
     "dist/"
   ],
@@ -22,12 +22,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-starter.git"
+    "url": "http://github.com/gilf/st-login.git"
   },
-  "author": "Ionic Team",
+  "author": "Gil Fink",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ionic-team/stencil"
-  },
-  "homepage": "https://github.com/ionic-team/stencil"
+  "homepage": "http://www.gilfink.net"
 }
