@@ -1,10 +1,11 @@
-import {Component, Element, EventEmitter, Event, Listen} from '@stencil/core';
+import {Component, Element, EventEmitter, Event, Listen, Prop} from '@stencil/core';
 
 @Component({
     tag: 'st-login',
     styleUrl: 'st-login.scss'
 })
 export class Login {
+    @Prop() forgotPasswordUrl: string;
     @Event() loginShouldOccur: EventEmitter;
     @Element() host: HTMLElement;
 
@@ -33,6 +34,10 @@ export class Login {
                   <label class="login-password">Password <span class="req">*</span>:</label>
                   <input type="password" name="password" required />
                 </div>
+                  {this.forgotPasswordUrl ?
+                      <p class="forgot">
+                        <stencil-route-link url={this.forgotPasswordUrl}>Forgot Password?</stencil-route-link>
+                      </p> : ''}
                 <button type="button" onClick={() => { this.login(); }}>Login</button>
               </div>
             </form>

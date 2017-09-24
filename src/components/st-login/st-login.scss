@@ -1,4 +1,8 @@
 st-login {
+  form {
+    width: 400px;
+  }
+
   label {
     position:absolute;
     transform:translateY(6px);
@@ -57,5 +61,10 @@ st-login {
     &:hover, &:focus {
       background: lightgrey;
     }
+  }
+
+  .forgot {
+    margin-top: 20px;
+    text-align:right;
   }
 }
