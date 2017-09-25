@@ -1,6 +1,7 @@
 # Stencil Login Component
 
-Stencil login component, st-login, is a login component that can be used as a starter point for a login component. 
+Stencil login component, st-login, is a login component that can be used as a starter point for a login component.
+![st-login](https://cdn-images-1.medium.com/max/1800/1*mRynNy9noyWbasnAtp0r1w.png)
 Explanation about the component can be found in [this post](https://medium.com/@gilfink/creating-a-simple-login-form-using-stencil-537098742b4e).
 
 
