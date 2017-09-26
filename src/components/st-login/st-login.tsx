@@ -10,21 +10,15 @@ export class Login {
     @Element() host: HTMLElement;
 
     login() {
-        let form = this.host.querySelector('form');
-        if (form.reportValidity()) {
-            let inputs = this.host.querySelectorAll('input');
-            this.loginShouldOccur.emit({ username: inputs[0].value, password: inputs[1].value });
-        }
-    }
+        event.preventDefault();
 
-    @Listen('keydown.enter')
-    handleEnter() {
-        this.login();
+        let inputs = this.host.querySelectorAll('input');
+        this.loginShouldOccur.emit({ username: inputs[0].value, password: inputs[1].value });
     }
 
     render() {
         return (
-            <form class="login-form">
+            <form class="login-form" onSubmit={() => this.login()}>
               <div class="login-container">
                 <div class="field-wrap">
                   <label class="login-username">Username <span class="req">*</span>:</label>
@@ -38,7 +32,7 @@ export class Login {
                       <p class="forgot">
                         <stencil-route-link url={this.forgotPasswordUrl}>Forgot Password?</stencil-route-link>
                       </p> : ''}
-                <button type="button" onClick={() => { this.login(); }}>Login</button>
+                <button type="submit">Login</button>
               </div>
             </form>
         );
